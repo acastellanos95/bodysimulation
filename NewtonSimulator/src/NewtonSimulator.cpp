@@ -3,12 +3,18 @@
 // Author      : andre
 // Version     :
 // Copyright   : 
-// Description : Hello World in C++, Ansi-style
+// Description : single threaded body simulation
 //============================================================================
 
 #include <iostream>
+#include "body.h"
 
 int main() {
-	std::cout << "!!!Hello World!!!" << std::endl; // prints !!!Hello World!!!
+	body Venus(0.815f,0.1f,0.2f,0.3f);
+	body VirtualBody;
+	std::cout << Venus.getID() << std::endl;
+	Venus.printmass();
+	Venus.printpositions();
+	Venus.printvelocities();
 	return 0;
 }
