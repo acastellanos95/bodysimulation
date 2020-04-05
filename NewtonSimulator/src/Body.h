@@ -1,21 +1,22 @@
 /*
- * body.h
+ * Body.h
  *
- *  Created on: Mar 12, 2020
+ *  Created on: Mar 24, 2020
  *      Author: andre
  */
+
 #include <vector>
+#include <list>
 #include <iostream>
 #ifndef BODY_H_
 #define BODY_H_
 
 
-class body {
+class Body {
 private:
 	float mass;
 	std::vector<float> pos = std::vector<float>(3);
 	std::vector<float> vel = std::vector<float>(3);
-	long long int id;
 
 public:
 	long long int getID();
@@ -28,9 +29,9 @@ public:
 	std::vector<float> getposition();
 	std::vector<float> getvelocities();
 	float getmass();
-	body();
-	body(float mass, float x, float y, float z);
-	virtual ~body();
+	Body();
+	Body(float mass, float x, float y, float z);
+	virtual ~Body();
 };
 
 #endif /* BODY_H_ */

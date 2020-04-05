@@ -1,20 +1,25 @@
 //============================================================================
 // Name        : NewtonSimulator.cpp
-// Author      : andre
+// Author      : 
 // Version     :
-// Copyright   : 
-// Description : single threaded body simulation
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
 //============================================================================
 
 #include <iostream>
-#include "body.h"
+#include <fstream>
+#include "Body.h"
+#include "Verlet.h"
+#include "Units.h"
 
-int main() {
-	body Venus(0.815f,0.1f,0.2f,0.3f);
-	body VirtualBody;
-	std::cout << Venus.getID() << std::endl;
-	Venus.printmass();
-	Venus.printpositions();
-	Venus.printvelocities();
+int main(){
+	std::string line;
+	std::ifstream myfile("/home/andre/Youtube/bodysimulation/NewtonSimulator/src/input.txt", std::ios::in);
+	if(myfile.is_open()){
+		while(std::getline(myfile,line)){
+			std::cout << line << "\n";
+	    }
+	    myfile.close();
+	}
 	return 0;
 }

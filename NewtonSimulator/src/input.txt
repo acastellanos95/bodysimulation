@@ -1,0 +1,2 @@
+#TYPE  POTENTIAL  NAME       MASS        POSX       POSY       POSZ       VELX       VELY       VELZ
+ BODY  1          Hello		 1.0		 0.0000     0.0000     0.0000     1.0000     0.0000     1.0000
